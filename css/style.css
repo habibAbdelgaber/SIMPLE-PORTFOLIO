@@ -4,8 +4,7 @@ font-family: 'Lobster Two', cursive;
 font-family: 'Pattaya', sans-serif;
 font-family: 'Source Sans Pro', sans-serif;
 font-family: 'Stint Ultra Condensed', cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100;200&display=swap');
-/* DEFAULT SETTINGS */
+@import url('https://fonts.googleapis.com/css2?family=Gorditas&family=Josefin+Slab:wght@100;200&display=swap');/* DEFAULT SETTINGS */
 *, *::after, *::before{
     margin: 0;
     padding: 0;
@@ -51,7 +50,6 @@ a{
 
 .header{
     background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1)), url('../images/denis-pavlovic-wl5AypUmamo-unsplash.jpg');
-    /* background: var(--color-primary); */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -124,8 +122,6 @@ a{
     justify-content: space-evenly;
     align-items: center;
     align-content: center;
-    /* height: 40vh; */
-
 }
 
 .description :is( button){
@@ -153,10 +149,9 @@ a{
 
 .sm-title{
     font-size: 3rem;
-    font-family: 'Lobster', cursive;
-    text-transform: uppercase;
+    font-family: 'Gorditas', cursive;
     letter-spacing: .5rem;
-    font-weight: 100;
+    font-weight: 200;
     text-shadow: 0 .2rem .2rem var(--color-black);
 }
 .sm-text{
@@ -176,9 +171,10 @@ a{
     background-size: cover;
     border: .2rem var(--color-primary) solid;
 }
-/* END OF DESCRIPTION */
-/* FOOTER */
 
+/* END OF DESCRIPTION */
+
+/* FOOTER */
 .copyrights{
     text-align: center;
     padding-top: 1rem;
@@ -199,10 +195,7 @@ a{
     }
     .btn-group{
         font-size: 1rem;
+        padding: 1rem;
     }
-
-    /* .paragraph{
-        display: none;
-    } */
 }
 
