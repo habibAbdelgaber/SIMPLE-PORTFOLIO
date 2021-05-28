@@ -1,0 +1,200 @@
+/* font-family: 'Handlee', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Lobster Two', cursive;
+font-family: 'Pattaya', sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
+font-family: 'Stint Ultra Condensed', cursive; */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap');
+/* DEFAULT SETTINGS */
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit
+}
+
+/* COLOR PALLETTE */
+
+:root{
+    --color-primary: #90ee90;
+    --color-secondary: #fafafa;
+    --color-black: #000;
+    --color-white: #fff;
+}
+
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    line-height: 1.6;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main{
+    /* height: 100vh; */
+}
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1)), url('../images/denis-pavlovic-wl5AypUmamo-unsplash.jpg');
+    /* background: var(--color-primary); */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    height: 50vh;
+    width: 100%;
+}
+
+.text{
+    padding-bottom: 1rem;
+    font-family: 'Handlee', cursive;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    word-spacing: .2rem;
+}
+.paragraph{
+    max-width: 70rem;
+    text-align: justify;
+    font-size: 2rem;
+    /* font-family: 'Josefin Slab', serif; */
+    /* color: var(--color-secondary) */
+}
+
+.readmore{
+    color: var(--color-primary);
+}
+.buttons{
+    width: 45%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+.btn-group{
+    background-color: var(--color-primary);
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .4));
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1.6rem;
+    border-radius: .3rem;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    border: var(--color-primary) .1rem solid;
+    font-family: 'Josefin Slab', serif;
+    transition: color .5s ease-in;
+}
+
+.btn-group:hover{
+    color: khaki;
+}
+
+/* DESCRIPTION */
+.description{
+    width: 50%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    /* height: 40vh; */
+
+}
+
+.description :is( button){
+    font-family: 'Josefin Slab', serif;
+    text-transform: uppercase;
+}
+.icons-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.icons-box span{
+    display: block;
+    margin: 1rem 0;
+}
+
+.fa-facebook{
+    color: royalblue;
+}
+
+.fa-twitter{
+    color: skyblue;
+}
+
+.sm-title{
+    font-size: 3rem;
+    font-family: 'Lobster', cursive;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-weight: 100;
+    text-shadow: 0 .2rem .2rem var(--color-black);
+}
+.sm-text{
+    max-width: 35rem;
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    color: var(--color-black);
+    text-align: justify;
+
+}
+
+.img-profile{
+    border-radius: 5rem 5rem 5rem 2rem;
+    background-size: cover;
+    border: .2rem var(--color-primary) solid;
+}
+/* END OF DESCRIPTION */
+/* FOOTER */
+
+.copyrights{
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.text-danger{
+    color: #e43509
+}
+
+@media screen and (max-width: 768px){
+    .description{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .icons-box{
+        display: none;
+    }
+    .btn-group{
+        font-size: 1rem;
+    }
+
+    .paragraph{
+        display: none;
+    }
+}
+
