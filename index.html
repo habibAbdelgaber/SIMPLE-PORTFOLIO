@@ -10,6 +10,9 @@
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
+        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100&family=Cinzel+Decorative&family=Handlee&family=Odibee+Sans&family=Stint+Ultra+Condensed&display=swap"
+        rel="stylesheet">
+    <link
         href="https://fonts.googleapis.com/css2?family=Handlee&family=Lobster&family=Lobster+Two&family=Pattaya&family=Source+Sans+Pro&family=Stint+Ultra+Condensed&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -17,10 +20,33 @@
 
 <body>
     <main>
+        <!-- CONTACT MODEL -->
+        <div class="contact">
+            <div class="contact-form">
+                <a type="button" class="close-contact">X</a>
+                <h1 class="contact-text">Contact us</h1>
+                <div id="error"></div>
+                <form class="form-group" action="/">
+                    <!-- <label for="name" class="form-label">Your Name*</label> -->
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                    <!-- <label for="email" class="form-label">Your e-mail*</label> -->
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your e-mail">
+                    <input type="submit" class="form-control get-in-touch" value="Get in touch">
+                </form>
+                <p class="remember-me"><input type="checkbox"> Remember me?</p>
+                <div class="contact-media">
+                    <!-- <p class="remember-me"><input type="checkbox"> Remember me?</p> -->
+                    <span class="fab fa-facebook fa-2x"></span>
+                    <span class="fab fa-twitter fa-2x"></span>
+                    <span class="fab fa-github fa-2x"></span>
+                </div>
+            </div>
+        </div>
+        <!-- END OF CONTACT MODEL -->
         <!--  HEADER -->
         <header class="header" id="header">
             <div class="content container">
-                <h1 class="text">Full Stack Web Developer</h1>
+                <h1 class="text heading"></h1>
                 <p class="paragraph">
                     Here are the most on demand technologies that any one wants to <br> start in the tech field must
                     learn
@@ -37,6 +63,33 @@
                 </div>
             </div>
         </header>
+        <!-- END OF HEADER -->
+        <!-- Count Down Timer -->
+        <div class="count-down-timer">
+            <h1 class="count-down-text">
+                Start Your Coding Journey
+            </h1>
+            <div class="count-down">
+                <div class="count-days">
+                    <p class="days">0</p>
+                    <p class="days-text">Days</p>
+                </div>
+                <div class="count-hours">
+                    <p class="hours">0</p>
+                    <p class="hours-text">Hours</p>
+                </div>
+                <div class="count-mins">
+                    <p class="mins">0</p>
+                    <p class="mins-text">Mins</p>
+                </div>
+                <div class="count-seconds">
+                    <p class="seconds">0</p>
+                    <p class="seconds-text">Days</p>
+                </div>
+            </div>
+        </div>
+        <!-- End of Count Down Timer -->
+        <!-- DESCRIPTION SECTION -->
         <div class="description" id="mydiscription">
             <div class="desc-content icons">
                 <div class="icons-box">
@@ -46,21 +99,26 @@
                 </div>
             </div>
             <div class="desc-content summry">
-                <h1 class="sm-title">Hi, I'm Habib Abdel</h1>
+                <h1 class="sm-title"><strong>Hi, I'm Habib Abdel</strong></h1>
                 <p class="sm-text">
                     <strong>&star; Backend & Frontend Developer</strong><br>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe corporis eius, laborum aliquam minus
                     nesciunt tempore accusamus fugit nam suscipit dolorum? Esse commodi dolorum laborum explicabo!
                     Suscipit dolorum ea quae.
                 </p>
-                <a href="#header" class="btn-group">Learn more &gt;&gt;</a>
+                <div class="contact-btn">
+                    <a href="#header" class="btn-group btn-contact">Learn more</a>
+                    <a type="button" class="btn-group btn-contact display-contact-form">Contact us</a>
+                </div>
             </div>
             <div class="desc-content profile-image">
                 <img src="./images/profile-pic.jpg" alt="" class="img-profile" width="100px">
             </div>
         </div>
+        <!-- END OF DESCRIPTION -->
     </main>
     <hr>
+    <!-- FOOTER -->
     <footer>
         <p class="copyrights">
             All Rights Reserved &copy;
@@ -68,6 +126,7 @@
                 class="fas fa-heart text-danger"></span>
         </p>
     </footer>
+    <!-- END OF FOOTER -->
     <script src="js/main.js"></script>
 </body>
 

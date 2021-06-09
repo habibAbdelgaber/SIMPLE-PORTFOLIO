@@ -33,7 +33,8 @@ body{
 }
 
 main{
-    /* height: 100vh; */
+    position: relative;
+    width: 100%;
 }
 .container{
     width: 90%;
@@ -47,7 +48,7 @@ ul li{
 a{
     text-decoration: none;
 }
-
+/* Header */
 .header{
     background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1)), url('../images/denis-pavlovic-wl5AypUmamo-unsplash.jpg');
     background-position: center;
@@ -74,9 +75,11 @@ a{
 .text{
     padding-bottom: 1rem;
     font-family: 'Handlee', cursive;
+    font-family: 'Cinzel Decorative', cursive;
     letter-spacing: .2rem;
     text-transform: uppercase;
     word-spacing: .2rem;
+    text-align: center;
 }
 .paragraph{
     text-align: center;
@@ -113,6 +116,53 @@ a{
 .btn-group:hover{
     color: khaki;
 }
+/* End of Header */
+
+/* Count Down Timer */
+.count-down-timer{
+    margin: 4rem 0;
+    border-bottom: 1px solid #000;
+    
+}
+
+.count-down-text{
+    text-align: center;
+    padding: 2rem 0;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding-bottom: 5rem;
+    font-family: 'Cinzel Decorative', cursive;
+    letter-spacing: .3rem;
+    word-spacing: .2rem;
+}
+.count-down{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.count-down > *{
+    background-color: rgba(187, 187, 187, .3);
+    padding: 1rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: .3rem;
+    margin: 0 4rem 4rem;
+    text-align: center;
+    border-radius: 50%;
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.count-down p {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 100;
+    letter-spacing: .2rem;
+}
+
+
+/* End of Count Down Timer */
 
 /* DESCRIPTION */
 .description{
@@ -148,11 +198,12 @@ a{
 }
 
 .sm-title{
-    font-size: 3rem;
-    font-family: 'Gorditas', cursive;
-    letter-spacing: .5rem;
+    font-size: 1.5rem;
+    /* font-family: 'Gorditas', cursive; */
+    font-family: 'Josefin Slab', serif;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
     font-weight: 200;
-    text-shadow: 0 .2rem .2rem var(--color-black);
 }
 .sm-text{
     max-width: 35rem;
@@ -166,13 +217,99 @@ a{
 
 }
 
+.display-contact-form{
+    cursor: pointer;
+}
+
 .img-profile{
     border-radius: 5rem 5rem 5rem 2rem;
     background-size: cover;
     border: .2rem var(--color-primary) solid;
 }
-
 /* END OF DESCRIPTION */
+
+/* CONTACT */
+.contact{
+    display: none;
+}
+
+.hidden{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    padding: 1rem;
+    width: 50rem;
+    height: 30rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 .2rem var(--color-primary);
+}
+
+.close-contact{
+    top: 1.2rem;
+    left: 94%;
+    color: rgb(236, 45, 45);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.contact-text{
+    font-family: 'Josefin Slab', serif;
+    text-transform: capitalize;
+    padding-bottom: .5rem;
+}
+.form-group label{
+    font-size: 1.5rem;
+}
+
+.form-group input{
+    display: block;
+    margin: 1rem 0;
+    padding: 1rem;
+    border: #eee .2rem solid;
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: 'Josefin Slab', serif;
+}
+.form-group > *:focus{
+    outline: none;
+}
+
+.get-in-touch{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-transform: capitalize;
+    transition: background-color .3s ease-in;
+    cursor: pointer;
+    font-size: 2rem;
+    letter-spacing: .3rem;
+}
+
+.get-in-touch:hover{
+    background-color: rgb(103, 243, 103);
+}
+.remember-me{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    margin-right: 5rem;
+}
+.contact-media span{
+    margin: .6rem 1rem;
+}
+/* END OF CONTACT */
 
 /* FOOTER */
 .copyrights{
@@ -191,11 +328,41 @@ a{
     }
 
     .icons-box{
-        display: none;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .icons-box span{
+        margin: 1rem 1.5rem 2rem 1rem;
+        font-size: 3rem;
+        padding-bottom: .5rem;
+        border-bottom: .2rem green solid;
     }
     .btn-group{
         font-size: 1rem;
-        padding: 1rem;
+        margin: 0 .2rem;
+        padding: .7rem;
+    }
+
+
+    .sm-title{
+        font-weight: 100;
+    }
+
+    .img-profile{
+        margin-top: 1.5rem;
+    }
+
+    .contact-btn{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .btn-contact{
+        margin-top: 1rem;
+        text-align: center;
+        font-size: 1.6rem;
+        border-radius: 3rem;
     }
 }
 
