@@ -94,6 +94,7 @@ textarea{
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    /* width: 100%; */
 }
 
 .roadmap-text{
@@ -458,30 +459,10 @@ textarea{
     }
 }
 
-/* @media (max-width: 375px){
-    .roadmap{
-        left: 9%;
-        
-    }
-} */
-
-/* @media (max-width: 375px){
-    .roadmap{
-        left: -20px;
-        
-    }
-}
-
-@media (max-width: 425px){
-    .roadmap{
-        left: 0;
-        
-    }
-} */
-
 @media screen and (max-width: 768px){
     .roadmap{
-        left: 30%;
+        /* left: 30%; */
+        display: none;
     }
     .description{
         flex-direction: column;
