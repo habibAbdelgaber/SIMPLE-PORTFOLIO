@@ -26,16 +26,39 @@
                 <a type="button" class="close-contact">X</a>
                 <h1 class="contact-text">Contact us</h1>
                 <div id="error"></div>
-                <form class="form-group" action="/">
-                    <!-- <label for="name" class="form-label">Your Name*</label> -->
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
-                    <!-- <label for="email" class="form-label">Your e-mail*</label> -->
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your e-mail">
-                    <input type="submit" class="form-control get-in-touch" value="Get in touch">
+                <form class="form-group">
+                    <div class="form-input">
+                        <label for="fullname" class="form-label">Full Name*</label>
+                        <input type="text" class="form-control" name="fullname" id="name" placeholder="Full Name">
+                    </div>
+                    <div class="form-inputs">
+                        <div class="form-input">
+                            <label for="firstname">First Name*</label>
+                            <input type="text" required name="firstname" id="firstname" placeholder="First Name">
+                        </div>
+                        <div class="form-input">
+                            <label for="lastname">First Name*</label>
+                            <input type="text" required name="lastname" id="lastname" placeholder="Last Name">
+                        </div>
+                    </div>
+                    <div class="form-input">
+                        <label for="email" class="form-label">Your e-mail*</label>
+                        <input type="email" required class="form-control" name="email" id="email"
+                            placeholder="Your e-mail">
+                    </div>
+                    <div class="form-input">
+                        <label for="phone" class="form-label">Phone Number*</label>
+                        <input type="number" required class="form-control" name="email" id="email"
+                            placeholder="Phone Number">
+                    </div>
+                    <div class="form-input">
+                        <label for="message" class="form-label">Message*</label>
+                        <textarea name="message" required id="message" placeholder="Message"></textarea>
+                    </div>
+                    <input type="submit" class="form-control get-in-touch" id="get-in-touch" value="Get in touch">
                 </form>
                 <p class="remember-me"><input type="checkbox"> Remember me?</p>
                 <div class="contact-media">
-                    <!-- <p class="remember-me"><input type="checkbox"> Remember me?</p> -->
                     <span class="fab fa-facebook fa-2x"></span>
                     <span class="fab fa-twitter fa-2x"></span>
                     <span class="fab fa-github fa-2x"></span>
@@ -62,6 +85,15 @@
                     <button class="btn-group">Django</button>
                 </div>
             </div>
+            <h1 class="roadmap">
+                <span class="roadmap-text">R</span>
+                <span class="roadmap-text">o</span>
+                <span class="roadmap-text">a</span>
+                <span class="roadmap-text">d</span>
+                <span class="roadmap-text">m</span>
+                <span class="roadmap-text">a</span>
+                <span class="roadmap-text">p</span>
+            </h1>
         </header>
         <!-- END OF HEADER -->
         <!-- Count Down Timer -->

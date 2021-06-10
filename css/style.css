@@ -48,6 +48,16 @@ ul li{
 a{
     text-decoration: none;
 }
+input:focus, textarea:focus{
+    outline: none;
+}
+
+textarea{
+    /* box-sizing: content-box; */
+    width: 200px;
+    height: 100px;
+    resize:vertical;
+}
 /* Header */
 .header{
     background-image: linear-gradient(to bottom right, rgba(0, 0, 0, .5), rgba(0, 0, 0, .1)), url('../images/denis-pavlovic-wl5AypUmamo-unsplash.jpg');
@@ -60,6 +70,7 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .content{
@@ -71,6 +82,53 @@ a{
     height: 50vh;
     width: 100%;
 }
+
+.roadmap{
+    position: absolute;
+    font-family: 'Cinzel Decorative', cursive;
+    top: 5rem;
+    left: 70%;
+    letter-spacing: .3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.roadmap-text{
+    display: block;
+    margin: 0 .5rem;
+    background: linear-gradient(to right bottom, rgb(144, 238, 144), rgb(173, 216, 230), #000);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+.roadmap-text:nth-child(1){
+    animation: drop-letters 4s .2s infinite;
+}
+.roadmap-text:nth-child(2){
+    animation: drop-letters 4s .3s infinite;
+}
+.roadmap-text:nth-child(3){
+    animation: drop-letters 4s .4s infinite;
+}
+.roadmap-text:nth-child(4){
+    animation: drop-letters 4s .5s infinite;
+}
+.roadmap-text:nth-child(5){
+    animation: drop-letters 4s .6s infinite;
+}
+.roadmap-text:nth-child(6){
+    animation: drop-letters 4s .7s infinite;
+}
+.roadmap-text:nth-child(7){
+    animation: drop-letters 4s .8s infinite;
+}
+
 
 .text{
     padding-bottom: 1rem;
@@ -134,6 +192,12 @@ a{
     font-family: 'Cinzel Decorative', cursive;
     letter-spacing: .3rem;
     word-spacing: .2rem;
+    text-shadow: 0 0 .3rem var(--color-primary);
+    /* font-size: 72px; */
+    background: -webkit-linear-gradient(red, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(2px 2px #333);
 }
 .count-down{
     display: flex;
@@ -152,6 +216,7 @@ a{
     text-align: center;
     border-radius: 50%;
     font-family: 'Cinzel Decorative', cursive;
+    box-shadow: 0 0 .2rem var(--color-black);
 }
 
 .count-down p {
@@ -186,7 +251,25 @@ a{
 
 .icons-box span{
     display: block;
-    margin: 1rem 0;
+    margin: auto 0 1rem auto;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    transition: transform .5s ease-in;
+    border: 2px rgb(98, 98, 236) solid;
+    border-radius: 50%;
+    text-align: center;
+    padding-top: 1.2rem;
+}
+.icons-box span:nth-child(2){
+    border: 2px lightblue solid;
+}
+.icons-box span:nth-child(3){
+    border: 2px var(--color-black) solid;
+}
+
+.icons-box span:hover{
+    transform: scale(1.1);
 }
 
 .fa-facebook{
@@ -199,7 +282,6 @@ a{
 
 .sm-title{
     font-size: 1.5rem;
-    /* font-family: 'Gorditas', cursive; */
     font-family: 'Josefin Slab', serif;
     letter-spacing: .2rem;
     text-transform: uppercase;
@@ -247,6 +329,7 @@ a{
     align-items: center;
 }
 .contact-form{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -254,12 +337,14 @@ a{
     background-color: var(--color-white);
     padding: 1rem;
     width: 50rem;
-    height: 30rem;
+    max-width: 100%;
+    /* height: 30rem; */
     border-radius: 1rem;
     box-shadow: 0 0 .2rem var(--color-primary);
 }
 
 .close-contact{
+    position: absolute;
     top: 1.2rem;
     left: 94%;
     color: rgb(236, 45, 45);
@@ -268,27 +353,53 @@ a{
 }
 .contact-text{
     font-family: 'Josefin Slab', serif;
+    font-family: 'Cinzel Decorative', cursive;
     text-transform: capitalize;
     padding-bottom: .5rem;
 }
+
+.form-input{
+    position: relative;
+}
 .form-group label{
-    font-size: 1.5rem;
+    font-family: 'Josefin Slab', serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: .7rem;
+    left: 1rem;
+    font-weight: 100;
 }
 
-.form-group input{
+.form-group input, textarea{
     display: block;
     margin: 1rem 0;
-    padding: 1rem;
-    border: #eee .2rem solid;
-    width: 100%;
+    padding: 1.5rem 1rem;
+    padding-top: 2.5rem;
+    border: var(--color-secondary) .2rem solid;
+    width: 40rem;
     font-size: 1.5rem;
     font-family: 'Josefin Slab', serif;
+    background-color: #fafafa;
 }
 .form-group > *:focus{
     outline: none;
 }
 
-.get-in-touch{
+.form-inputs{
+    display: flex;
+}
+
+.form-inputs .form-input input{
+    width: 19.5rem;
+    margin-right: 1rem;
+}
+
+.form-inputs .form-input label{
+    top: 1.5rem;
+}
+
+#get-in-touch{
     background-color: var(--color-primary);
     color: var(--color-white);
     text-transform: capitalize;
@@ -296,9 +407,11 @@ a{
     cursor: pointer;
     font-size: 2rem;
     letter-spacing: .3rem;
+    padding: 1.5rem 1rem;
+    
 }
 
-.get-in-touch:hover{
+#get-in-touch:hover{
     background-color: rgb(103, 243, 103);
 }
 .remember-me{
@@ -308,20 +421,67 @@ a{
 }
 .contact-media span{
     margin: .6rem 1rem;
+    cursor: pointer;
 }
 /* END OF CONTACT */
 
 /* FOOTER */
 .copyrights{
     text-align: center;
-    padding-top: 1rem;
+    padding: 1rem 0;
 }
 
 .text-danger{
     color: #e43509
 }
 
+@keyframes drop-letters{
+    0%{
+        transform: translateY(0);
+    }
+
+    10%{
+        transform: translateY(0);
+    }
+
+    15%{
+        transform: translateY(-100%);
+    }
+
+    20%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 375px){
+    .roadmap{
+        left: 9%;
+        
+    }
+}
+
+/* @media (max-width: 375px){
+    .roadmap{
+        left: -20px;
+        
+    }
+}
+
+@media (max-width: 425px){
+    .roadmap{
+        left: 0;
+        
+    }
+} */
+
 @media screen and (max-width: 768px){
+    .roadmap{
+        left: 45%;
+    }
     .description{
         flex-direction: column;
         justify-content: space-between;
@@ -364,5 +524,34 @@ a{
         font-size: 1.6rem;
         border-radius: 3rem;
     }
+
+    .count-down-text{
+        font-size: 1rem;
+    }
+
+    .form-group input, textarea{
+        margin: .5rem auto;
+        width: 30rem;
+    }
+
+    .form-group label{
+        top: .7rem;
+        left: 1.4rem;
+    }
+
+    .form-inputs{
+        display: flex;
+        flex-direction: column
+    }
+
+    .form-inputs .form-input input{
+        width: 30rem;
+        margin: .5rem auto;
+    }
+
+    .icons-box span{
+        padding-top: .8rem;
+    }
 }
+
 

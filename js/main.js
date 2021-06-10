@@ -11,6 +11,12 @@ document.querySelector('.display-contact-form').addEventListener('click', functi
 
 document.querySelector('.close-contact').addEventListener('click', function(){
     document.querySelector('.contact').remove('hidden')
+    setTimeout(window.location.reload(true), 5000)
+    setTimeout(window.scrollTo(yCord), 100)
+    // window.scrollTo(0, document.body.scrollHeight);
+    // $(document).ready(function(){
+    //     $(window).scrollTop(true);
+    // });
 })
 
 document.querySelector('.form-control').addEventListener('submit', function(e){
