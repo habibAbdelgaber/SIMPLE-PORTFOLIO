@@ -71,6 +71,7 @@ textarea{
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow-x: hidden;
 }
 
 .content{
@@ -457,12 +458,12 @@ textarea{
     }
 }
 
-@media (max-width: 375px){
+/* @media (max-width: 375px){
     .roadmap{
         left: 9%;
         
     }
-}
+} */
 
 /* @media (max-width: 375px){
     .roadmap{
@@ -480,7 +481,7 @@ textarea{
 
 @media screen and (max-width: 768px){
     .roadmap{
-        left: 45%;
+        left: 30%;
     }
     .description{
         flex-direction: column;
