@@ -493,6 +493,7 @@ textarea{
 
 /* Web Dev Tools */
 .main-content{
+    /* width: 95%; */
     flex-direction: row;
     margin: 5rem auto;
 }
@@ -514,7 +515,7 @@ textarea{
 .content-images{
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .images{
@@ -702,6 +703,14 @@ textarea{
 
     .item{
         margin: 1rem 0;
+    }
+
+    .content-images{
+        flex-direction: column;
+    }
+
+    .images{
+        margin: 1rem auto;
     }
 }
 
