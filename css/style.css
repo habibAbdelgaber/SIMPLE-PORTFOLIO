@@ -515,6 +515,7 @@ textarea{
 .content-images{
     display: flex;
     justify-content: space-evenly;
+    margin: 0 auto;
     /* flex-wrap: wrap; */
 }
 
@@ -709,7 +710,12 @@ textarea{
         flex-direction: column;
     }
 
+    .content-box{
+        margin: 0 auto;
+    }
+
     .images{
+        width: 100%;
         margin: 1rem auto;
     }
 }
